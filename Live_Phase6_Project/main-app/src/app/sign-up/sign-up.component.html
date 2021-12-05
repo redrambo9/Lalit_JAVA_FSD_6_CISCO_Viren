@@ -1,0 +1,67 @@
+<div class="back">
+<div class="container" style="margin :0 auto">
+  <div class="title">Sign Up</div>
+  <div class="content">
+    <form name="signup">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">First Name</span>
+          <input type="text" name='firstName' [(ngModel)]='firstName' placeholder="Enter your first name" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Middle Name</span>
+          <input type="text" name='middleName' [(ngModel)]='middleName' placeholder="Enter your middle name" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Last Name</span>
+          <input type="text" name = "lastName" [(ngModel)]='lastName' placeholder="Enter your last name" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="text" name = "email" [(ngModel)]='email' placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Password</span>
+          <input type="password" name ="password" [(ngModel)]='password' placeholder="Enter your Password" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Confirm Password</span>
+          <input type="password" name = "confirmPassword" [(ngModel)]='confirmPassword' placeholder="Re-enter password" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Age</span>
+          <input type="text" name ="age" [(ngModel)]='age' placeholder="Enter Age" required>
+        </div>
+
+        
+      <div class="gender-details">
+        <input type="radio" (click)='selectGender($event)' value='male' name="gender" id="dot-1">
+        <input type="radio" (click)='selectGender($event)' value='female' name="gender" id="dot-2">
+        <input type="radio" (click)='selectGender($event)' value='other' name="gender" id="dot-3">
+        <span class="gender-title">Gender</span>
+        <div class="category">
+          <label for="dot-1">
+          <span class="dot one"></span>
+          <span class="gender">Male</span>
+         </label>
+         <label for="dot-2">
+          <span class="dot two"></span>
+          <span class="gender">Female</span>
+         </label>
+         <label for="dot-3">
+          <span class="dot three"></span>
+          <span class="gender">Prefer not to say</span>
+         </label>
+        </div>
+      </div>
+      
+      <div class="button">
+        <input type="submit" (click)='onSignUp()' value="Sign Up">
+      </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+

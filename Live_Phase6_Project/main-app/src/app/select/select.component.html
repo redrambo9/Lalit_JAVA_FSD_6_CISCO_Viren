@@ -1,0 +1,49 @@
+
+<section class="home">
+     
+    <div class ="result" style="background-color:rgb(36, 92, 175);color:white;text-align: center;font-size:28px;height:40px">
+        
+    <p>Search Results...</p>
+</div>
+
+<div class ="dropdown">
+    <select name="selectname" id="selectid" (change)="sorting($event)">
+        <option value="sort" hidden selected>Sort</option>
+        <option value="name">By Name</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+        
+    </select>
+</div>
+
+<table class ="table table-dark col-md-6">
+    
+   <tr>
+       
+       <th>ID</th>
+       <th>Photo</th>
+       <th>Brand</th>
+       <th>Quantity</th>
+       <th>Price</th>
+       <th>Select</th>
+       
+
+   </tr>
+    <tr *ngFor = "let p of arr;let i= index">
+        
+        <td>{{p.ID}}</td>
+        <td><img [src]="p.Image"  style="height: 100px; width: 100px;" > </td>
+        <td>{{p.Brand}}</td>
+        <td>{{p.Quantity}}</td>
+        <td>&#8377;{{p.Price}}</td>
+        
+        <td><input type="checkbox" style="width: 25px;height: 25px;" (change)='onCheck($event,i)'></td>
+
+    </tr>  
+    
+</table>
+<button class="btn btn-primary" (click)="onContinue()">Continue</button>
+<!--<img src="../../assets/grocery2.jpg">-->
+</section>
+
+

@@ -1,0 +1,31 @@
+<section class="home">
+<div class ="result" style="background-color:rgb(177, 243, 9);color:black;text-align: center;font-size:28px;height:40px">
+    <p>
+        <i class="fas fa-shopping-cart fa"></i>
+        Cart Items
+
+    </p>
+</div>
+<table class ="table table-dark col-md-6">
+    <tr>
+        
+        <th>Item</th>
+        <th>Description</th>
+        <th>Price</th>
+ 
+    </tr>
+     <tr *ngFor = "let p of selectedItems;">
+         
+        <td><img [src]="p.Image"  style="height: 100px; width: 100px;" > </td>  
+        <td>{{p.Category}}<br>{{p.Brand}} {{p.Quantity}}</td>
+        <td>&#8377;{{p.Price}}</td>
+ 
+     </tr>  
+   
+ </table>
+
+<br>
+<br>
+<button class="btn btn-primary" (click)="onCheckout()">Continue to Pay &#8377; {{sum}}</button>
+<!--<img src="../../assets/grocery3.jpg">-->
+</section>

@@ -1,0 +1,29 @@
+<body>
+  <div class = "back">
+  <div class="container" style="margin :0 auto">
+  <div class="title">Login</div>
+  <div class="content">
+    <form name="login">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="text" name="email" [(ngModel)]="email" placeholder="Enter your email" required>
+        </div>
+       <div class="input-box">
+          <span class="details">Password</span>
+          <input type="password" name="password" [(ngModel)]="password" placeholder="Enter your Password" required>
+       </div>
+
+      </div>
+      
+      <div class="button">
+        <input type="submit" (click)="onlogin()" value="Login">
+      </div>
+      <div class="button">
+        <input (click)="toSignUp()" type="submit" value="Not Registered? Sign Up">
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+</body>

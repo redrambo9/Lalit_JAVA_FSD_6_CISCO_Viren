@@ -1,0 +1,32 @@
+
+<section class = "home">
+      <nav>
+		<div class="logo">
+                  
+			<p>Foodbox</p>
+		</div>
+		<ul>
+			<li><a href="" class="active">Home</a></li>
+			<li><a href="/aboutus">About</a></li>
+			<li><a href="" title="Search your Product in the Search Bar!" (click)="onclick2()">Shop</a></li>
+			<li><a href="/contactus">Contact</a></li>
+                  <li *ngIf='name!== ""'>
+                   <select name="" id="" class= "form-control" (change)="onselect($event)">
+                         <option value="" selected hidden >{{name}}</option>
+                         <option value="logout"> Log Out</option>
+                   </select>
+                  </li>
+
+                  <li *ngIf='name === ""'><a href="/loginpage">Login / Sign Up</a></li>
+                  <div class = "animation start-home"></div>
+		</ul>
+	</nav>
+
+    <img src="../../assets/grocery4.jpg">
+  <div class="searchbox">
+  <input type ="text" name = "search" [(ngModel)]="searchString" placeholder = "What are you looking for...">
+        <div class ="btn">
+                <a (click)="onclick()"> <i class="fa fa-search" style="font-size:26px"></i></a>
+        </div>
+  </div> 
+  </section>
